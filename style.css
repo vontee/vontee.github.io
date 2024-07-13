@@ -1,0 +1,159 @@
+body {
+    max-width: 800px; /* max-width */
+    margin: 0 auto; /* centered */
+    padding: 20px; /* readability */
+    font-family: 'Segoe UI Variable Text', 'Segoe UI', sans-serif; /* personal favorite, adjustable later */
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI Variable Display', serif;
+    color: black;
+}
+
+p {
+    line-height: 1.6; /* readability */
+    color: black;
+}
+
+a {
+    color: #0066cc; /* links */
+    text-decoration: none; /* remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* underline on hover */
+}
+
+.math.inline {
+    display: inline;
+}
+
+.math.display {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+}.math.displayLeft {
+    display: block;
+    text-align: left;
+    margin: 10px 10px 10px 10px;
+}
+
+ol {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+#footnote-1 {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* nav style */
+nav ul {
+    list-style-type: none; /* no bullets */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* horizontal list */
+    margin-right: 10px; /* spacing */
+}
+
+
+.featured-topics {
+    display: flex; /* flexbox */
+    justify-content: space-between; /* spacing */
+    margin-top: 20px;
+}
+
+.topic {
+    width: 30%; /* topic width */
+    border: 1px solid #ccc; /* border */
+    padding: 10px; /* visual */
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* shadow */
+}
+
+.topic h3 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+
+
+/* button style */
+.button-container {
+    display: flex; /* place buttons inline */
+    gap: 10px; 
+    align-items: center; /* align with menu */
+    margin-top: 10px;
+}
+
+#dark-mode-toggle {
+    position: fixed; /* fixed */
+    top: 10px; /* top right corner */
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000; /* ensure it stays on top */
+}
+
+#home-button, #nav-button{
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: 2px solid #3a3a3a;
+    cursor: pointer;
+    border-radius: 5px;
+}#home-button {   
+    margin-left: 10px; 
+    position: relative; /* relative positioning */
+    top: -5px; /* looks weird without! */
+    }
+
+
+#dark-mode-toggle:hover,
+#home-button:hover, #nav-button:hover {
+    background-color: #555;
+}
+
+body.dark-mode {
+    background-color: #181818;
+    color: white;
+}
+
+body.dark-mode #dark-mode-toggle
+{
+    background-color: #111;
+    border: 3px solid #444;
+    cursor: pointer;
+}
+
+body.dark-mode a {
+    color: #97b7ff;
+}
+
+body.dark-mode a:hover {
+    color: #ffffff;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode ol {
+    color: white;
+}
