@@ -1,13 +1,23 @@
+/* ( trbl , tb-lr , t-lr-b ) */
 body {
     max-width: 800px; /* max-width */
     margin: 0 auto; /* centered */
-    padding: 20px; /* readability */
+    padding: 30px 15px; /* readability */
     font-family: 'Segoe UI Variable Text', 'Segoe UI', sans-serif; /* personal favorite, adjustable later */
 }
 
-h1, h2, h3 {
+/* Common styles for all headings */
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Segoe UI Variable Display', 'Segoe UI', sans-serif;
     color: black;
+    margin: 0 0 10px;
+    line-height: 1.2;
+} h1 {
+    font-size: 2.2em;
+} h2 {
+    font-size: 1.6em;
+} h3 {
+    font-size: 1.4em;
 }
 
 p {
@@ -24,6 +34,21 @@ a:hover {
     text-decoration: underline; /* underline on hover */
 }
 
+ol {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+#footnote-1 {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* LaTeX */
 .math.inline {
     display: inline;
 }
@@ -38,18 +63,11 @@ a:hover {
     margin: 10px 10px 10px 10px;
 }
 
-ol {
-    margin: 20px 0;
-    padding-left: 40px;
-}
-
-ol li {
-    margin-bottom: 10px;
-}
-
-#footnote-1 {
-    font-size: 0.9em;
-    color: #666;
+/* table */
+table, th, td {
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
 }
 
 /* nav style */

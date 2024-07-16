@@ -1,4 +1,4 @@
-// LaTeX support with mathjax
+//check for  LaTeX support with mathjax
 document.addEventListener('DOMContentLoaded', function() {
     if (window.MathJax) {
         MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
