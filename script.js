@@ -1,3 +1,15 @@
+// LaTeX support with mathjax
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true
+        }
+    });
+</script>
+
+// dark mode
 function enableDarkMode() {
     document.body.classList.add('dark-mode');
     localStorage.setItem('darkMode', 'enabled');
