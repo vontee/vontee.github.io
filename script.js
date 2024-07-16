@@ -1,13 +1,9 @@
 // LaTeX support with mathjax
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']],
-            processEscapes: true
-        }
-    });
-</script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.MathJax) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+});
 
 // dark mode
 function enableDarkMode() {
