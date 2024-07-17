@@ -6,7 +6,7 @@ body {
     font-family: 'Segoe UI Variable Text', 'Segoe UI', sans-serif; /* personal favorite, adjustable later */
 }
 
-/* Common styles for all headings */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Segoe UI Variable Display', 'Segoe UI', sans-serif;
     color: black;
@@ -46,6 +46,20 @@ ol li {
 #footnote-1 {
     font-size: 0.9em;
     color: #666;
+}
+
+.under-construction {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffcc00;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2em;
+    z-index: 1001; /* Ensure it stays on top */
+    border-bottom: 2px solid #cc9900;
 }
 
 /* LaTeX */
