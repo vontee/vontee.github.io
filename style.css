@@ -46,7 +46,11 @@ ol li {
 #footnote-1 {
     font-size: 0.9em;
     color: #666;
+}.footnote {
+    vertical-align: super;
+    font-size: 0.6em;
 }
+
 
 .under-construction {
     position: fixed;
@@ -184,6 +188,7 @@ body.dark-mode a:hover {
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
+body.dark-mode h4,
 body.dark-mode p,
 body.dark-mode li,
 body.dark-mode ol {
