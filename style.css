@@ -270,22 +270,23 @@ body.dark-mode ol {
 
 .dropdown-content {
    display: none;
+   flex-direction: column;
    background-color: transparent;
    position: absolute;
    right: 0;
-   flex-direction: column;
-   gap: 4px;
    z-index: 10;
 }
 
 .dropdown-content button {
    text-align: right;
+
+   margin: 4px;
    background-color: #333;
    color: white;
    border: none;
    text-decoration: none;
    display: block;
-   width: 100%;
+   width: fit-content;
 }
 
 .dropdown-content button:hover {
