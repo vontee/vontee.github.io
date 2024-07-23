@@ -30,3 +30,13 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function()
         enableDarkMode();
     }
 });
+
+function dismiss(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.style.display = 'none';
+    }
+    
+}
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Navigation Bar</title>
+    <style>
+        html, body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            box-sizing: border-box;
+            font-family: 'Segoe UI Variable Display', sans-serif;
+            overflow-x: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            height: 50px;
+            background-color: white;
+            color: black;
+            position: sticky;
+            top: 0;
+            width: 90%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-link a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-link a:hover {
+            text-decoration: underline;
+            color: #F5C754;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            background-color: white;
+            position: absolute;
+            right: 0;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .dropdown-content button {
+            text-align: left;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        .dropdown-content button:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body style="width: 100%;">
+    <header class="header">
+        <div class="app-logo">
+            <h1>Math Language Wiki</h1>
+        </div>
+        <div class="nav-actions">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="nav.html">Table of Contents</a></li>
+            </ul>
+            <span class="button-container"> 
+                <div class="dropdown">
+                    <button>Menu</button>
+                    <div class="dropdown-content">
+                        <button id="dark-mode-toggle">Dark Mode</button>
+                        <button>Acknowledgments</button>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>

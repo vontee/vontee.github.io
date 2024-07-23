@@ -1,14 +1,17 @@
 /* ( trbl , tb-lr , t-lr-b ) */
+
+@import url('/font/font.css');
+
 body {
     max-width: 800px; /* max-width */
+    overflow: visible;
     margin: 0 auto; /* centered */
-    padding: 30px 15px; /* readability */
-    font-family: 'Segoe UI Variable Text', 'Segoe UI', sans-serif; /* personal favorite, adjustable later */
+    padding: 60px 15px; /* readability */
+    font-family: 'Segoe UI Variable Text', sans-serif; /* personal favorite, adjustable later */
 }
 
-
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Segoe UI Variable Display', 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI Variable Display', sans-serif;
     color: black;
     margin: 0 0 10px;
     line-height: 1.2;
@@ -26,12 +29,12 @@ p {
 }
 
 a {
-    color: #0066cc; /* links */
+    color: #0066cc;
     text-decoration: none; /* remove underline */
 }
 
-a:hover {
-    text-decoration: underline; /* underline on hover */
+a:hover {/* underline on hover */
+    text-decoration: underline;
 }
 
 ol {
@@ -43,28 +46,45 @@ ol li {
     margin-bottom: 10px;
 }
 
-#footnote-1 {
-    font-size: 0.9em;
-    color: #666;
-}.footnote {
-    vertical-align: super;
+iframe {
+    width: 100%; 
+    height: 50px;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.footnote {
     font-size: 0.6em;
 }
 
 
-.under-construction {
+#under-construction {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffcc00;
     color: #000;
-    text-align: center;
-    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
     font-size: 1.2em;
-    z-index: 1001; /* Ensure it stays on top */
-    border-bottom: 2px solid #cc9900;
+    z-index: 15;
+    border: 2px solid #cc9900;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+#close-button {
+    margin: 1px 0px 0px 10px;
+    background: #b28500;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+
 
 /* LaTeX */
 .math.inline {
@@ -88,33 +108,21 @@ table, th, td {
     text-align: left;
 }
 
-/* nav style */
-nav ul {
-    list-style-type: none; /* no bullets */
-    padding: 0;
-}
-
-nav ul li {
-    display: inline; /* horizontal list */
-    margin-right: 10px; /* spacing */
-}
-
-
-.featured-topics {
+.tiles {
     display: flex; /* flexbox */
     justify-content: space-between; /* spacing */
     margin-top: 20px;
 }
 
-.topic {
-    width: 30%; /* topic width */
+.tile {
+    width: 30%; /* tile width */
     border: 1px solid #ccc; /* border */
     padding: 10px; /* visual */
     border-radius: 5px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* shadow */
 }
 
-.topic h3 {
+.tile h3 {
     margin-top: 0;
 }
 
@@ -124,41 +132,38 @@ footer {
     color: #777;
 }
 
-
 /* button style */
-.button-container {
-    display: flex; /* place buttons inline */
-    gap: 10px; 
-    align-items: center; /* align with menu */
-    margin-top: 10px;
-}
-
-#dark-mode-toggle {
-    position: fixed; /* fixed */
-    top: 10px; /* top right corner */
-    right: 10px;
-    padding: 5px 10px;
+button {
+    border: none;
+    padding: 6px 10px;
     background-color: #333;
     color: white;
     border: 1px solid #555;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
     cursor: pointer;
-    border-radius: 5px;
-    z-index: 1000; /* ensure it stays on top */
+    align-items: center;
+    justify-content: center;
 }
 
-#home-button, #nav-button{
+.button-container {
+    display: flex; /* place buttons inline */
+    gap: 8px; 
+    align-items: center; /* align with menus */
+}
+
+#home-button, #nav-button {
     padding: 5px 10px;
     background-color: #333;
     color: white;
     border: 2px solid #3a3a3a;
     cursor: pointer;
-    border-radius: 5px;
-}#home-button {   
+}
+#home-button {   
     margin-left: 10px; 
-    position: relative; /* relative positioning */
+    position: relative;
     top: -5px; /* looks weird without! */
-    }
-
+}
 
 #dark-mode-toggle:hover,
 #home-button:hover, #nav-button:hover {
@@ -170,10 +175,8 @@ body.dark-mode {
     color: white;
 }
 
-body.dark-mode #dark-mode-toggle
-{
+body.dark-mode #dark-mode-toggle {
     background-color: #111;
-    border: 3px solid #444;
     cursor: pointer;
 }
 

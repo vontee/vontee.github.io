@@ -3,30 +3,34 @@
 <head>
     <title>Range</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: ['\\(', '\\)']],
-                displayMath: ['\\[', '\\]']],
-                processEscapes: true
-            }
-        });
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: ['\\(', '\\)']],
+          displayMath: ['\\[', '\\]']],
+          processEscapes: true
+        }
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" type="text/css" href="../style.css">
-</head>
-<body>
+  </head>
 
-<div class="under-construction">This page is under construction. Check back soon!</div>
+  <body>
+
+    <div id="under-construction">
+        <span>This page is under construction.</span>
+        <button id="close-button" onclick="dismiss('under-construction')"><b>╳</b></button>
+    </div>
+
 
     <header>
-        <div class="header-container">
+      <nav>
+        <iframe src="../nav-bar.html"></iframe>
+      </nav>
             <h1>Range
             <button id="home-button" onclick="location.href='../index.html'">Return Home</button></h1>
         </div>
-        <nav>
-            <button id="dark-mode-toggle">Dark Mode</button>
-        </nav>
     </header>
     <main>
         <h2>Everyday usage and use in mathematics</h2>
