@@ -1,42 +1,48 @@
-//check for  LaTeX support with mathjax
+// script.js
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.MathJax) {
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    // LaTeX with mathjax
+    if (window.MathJax && MathJax.typesetPromise) {
+        MathJax.typesetPromise()
+            .then(() => {
+                console.log('MathJax typeset complete');
+            })
+            .catch(err => console.error('Error typesetting MathJax:', err));
     }
-});
 
-// dark mode
-function enableDarkMode() {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'enabled');
-}
+    // fetch header
+    fetch('header.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('header_js').innerHTML = data;
 
+            document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+                if (document.body.classList.contains('dark-mode')) {
+                    disableDarkMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+        })
+        .catch(error => console.error('Error loading header:', error));
 
-function disableDarkMode() {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'disabled');
-}
+    // dark mode
+    function enableDarkMode() {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    }
 
-// check state
-if (localStorage.getItem('darkMode') === 'enabled') {
-    enableDarkMode();
-}
+    function disableDarkMode() {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+    }
 
-// toggle on click
-document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-    if (document.body.classList.contains('dark-mode')) {
-        disableDarkMode();
-    } else {
+    // dm check
+    if (localStorage.getItem('darkMode') === 'enabled') {
         enableDarkMode();
     }
 });
-
-function dismiss(id) {
-    const element = document.getElementById(id);
-    if (element) {
-        element.style.display = 'none';
-    }
-    
-}
-
-

@@ -3,25 +3,25 @@
 <head>
     <title>template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['\\(', '\\)'], ['\\[', '\\]']],
-          processEscapes: true
-        },
-        svg: {
-          fontCache: 'global'
-        }
-      };
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: ['\\(', '\\)']],
+                displayMath: ['\\[', '\\]']],
+                processEscapes: true
+            }
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  </head>
-
-    <div class="under-construction">This page is under construction. Check back soon!</div>
-
-    <header>
-        <div class="header-container">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+    <span id="header_js">
+    <div class="header-container">
+          <div id="under-construction">
+              <span>This page is under construction.</span>
+              <button id="close-button" onclick="dismiss('under-construction')"><b>╳</b></button>
+          </div>
             <h1>Page Title
             <button id="home-button" onclick="location.href='../index.html'">Return Home</button>
             </h1>

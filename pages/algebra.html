@@ -3,26 +3,25 @@
 <head>
     <title>Algebra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['\\(', '\\)'], ['\\[', '\\]']],
-          processEscapes: true
-        },
-        svg: {
-          fontCache: 'global'
-        }
-      };
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: ['\\(', '\\)'],
+                displayMath: ['\\[', '\\]'],
+                processEscapes: true
+            }
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  </head>
-  
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
 <body>
-    <header>
-        <nav>
-            <iframe src="../nav-bar.html"></iframe>
-        </nav>
+    <span id="header_js">
+    <div class="header-container">
+          <div id="under-construction">
+              <span>This page is under construction.</span>
+              <button id="close-button" onclick="dismiss('under-construction')"><b>╳</b></button>
+          </div>
         <div class="header-container">
             <h1>Algebra
             <button id="home-button" onclick="location.href='../index.html'">Return Home</button></h1>

@@ -197,3 +197,67 @@ body.dark-mode li,
 body.dark-mode ol {
     color: white;
 }
+
+#header-js{
+    flex-wrap: nowrap; 
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+}.nav-actions a:hover {
+    text-decoration: underline;
+     color: #F5C754;
+ }
+
+.nav-links {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 24px;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+    flex: 1 1 auto;
+}
+
+.dropdown {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropdown-content button {
+    text-align: left;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

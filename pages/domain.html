@@ -9,7 +9,7 @@
          tex: {
            inlineMath: [['\\(', '\\)'], ['\\[', '\\]']],
            processEscapes: true
-          },
+       },
        svg: {
          fontCache: 'global'
        }
@@ -20,8 +20,13 @@
   </head>
   
   <body>
-    <header>
-        <div id="header_js"></div>
+    <body>
+      <span id="header_js">
+      <div class="header-container">
+            <div id="under-construction">
+                <span>This page is under construction.</span>
+                <button id="close-button" onclick="dismiss('under-construction')"><b>╳</b></button>
+            </div>
       <div class="header-container">
             <h1>Domain
             <button id="home-button" onclick="location.href='../index.html'">Return Home</button>
@@ -32,7 +37,7 @@
     <main>
         <h2>Everyday usage and use in mathematics</h2>
     <p>In everyday English, the word <b>domain</b> describes a political region. The Oxford English Dictionary defines <a href="https://www.oed.com/dictionary/domain_n">domain</a> as "A district or region under rule, control, or influence, or contained within certain limits; realm; sphere of activity, influence, or dominion."<a href="#footnote-1" class="footnote">[1]</a> For example, the domain of King Charles III is the commonwealth of nations. The word <b>domain</b> is also used to describe a figurative area or region. For example, science and history are sometimes called domains of knowledge.</p>
-    <p>In mathematics, the word domain refers to a set of points where a <a href="function.html">function</a> is defined. In other words, the domain of a function is the set of possible inputs to a function.</p>
+    <p>In mathematics, the word domain refers to a set of points where a <a href="/pages/function.html">function</a> is defined. In other words, the domain of a function is the set of possible inputs to a function.</p>
     <p>For example, consider the real-valued function:<span class="math display">\[f(x) = \sqrt{x + 1}\]</span>In order to make sense of <span class="math inline">\(\sqrt{x + 1}\)</span> as a real number, it is necessary that the term <span class="math inline">\(x + 1\)</span> occurring in the square root is at least zero. Hence <span class="math inline">\(x + 1 \geq 0\)</span> and <span class="math inline">\(x \geq - 1\).</span> So the <b>domain</b> of the function <span class="math inline">\(f(x)\)</span> consists of those <span class="math inline">\(x\)</span> such that <span class="math inline">\(x \geq -1\)</span>.</p>
     <p>It is common in mathematics to talk about the inputs to a function as <i>places</i>, so the domain of a function is thought of as a <i>region</i>, agreeing with the everyday use of the term. For example, it is common to refer to <span class="math inline">\(f(x)\)</span> as the value of the function <span class="math inline">\(f\)</span> at the point <span class="math inline">\(x\)</span>. The set of numbers <span class="math inline">\(x\)</span> satisfying the inequality <span class="math inline">\(x \geq -1\)</span> is an infinite ray on the real number line. It is useful to think of this ray as the region where the expression <span class="math inline">\(f(x)\)</span> makes sense.</p>
     <p>The word domain is translated into Spanish as <b>dominio</b>. The everyday meaning of <b>dominio</b> in Spanish is similar to the English meaning in both its literal and figurative usage.</p>
