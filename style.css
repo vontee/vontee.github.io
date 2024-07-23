@@ -2,190 +2,223 @@
 
 @import url('/font/font.css');
 
+:root {
+   --yellow: #f3cf38;
+}
+
 body {
-    max-width: 800px; /* max-width */
-    overflow: visible;
-    margin: 0 auto; /* centered */
-    padding: 60px 15px; /* readability */
-    font-family: 'Segoe UI Variable Text', sans-serif; /* personal favorite, adjustable later */
+   max-width: 800px; /* max-width */
+   overflow: visible;
+   margin: 0 auto; /* centered */
+   padding: 15px; /* readability */
+   font-family: 'Segoe UI Variable Text', sans-serif; /* personal favorite, adjustable later */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Segoe UI Variable Display', sans-serif;
-    color: black;
-    margin: 0 0 10px;
-    line-height: 1.2;
+   font-family: 'Segoe UI Variable Display', sans-serif;
+   color: black;
+   margin: 0 0 10px;
+   line-height: 1.2;
 } h1 {
-    font-size: 2.2em;
+   font-size: 2.2em;
 } h2 {
-    font-size: 1.6em;
+   font-size: 1.6em;
 } h3 {
-    font-size: 1.4em;
+   font-size: 1.4em;
 }
 
 p {
-    line-height: 1.6; /* readability */
-    color: black;
+   line-height: 1.6; /* readability */
+   color: black;
 }
 
 a {
-    color: #0066cc;
-    text-decoration: none; /* remove underline */
+   color: #0066cc;
+   text-decoration: none; /* remove underline */
 }
 
 a:hover {/* underline on hover */
-    text-decoration: underline;
+   text-decoration: underline;
 }
 
 ol {
-    margin: 20px 0;
-    padding-left: 40px;
+   margin: 20px 0;
+   padding-left: 40px;
 }
 
 ol li {
-    margin-bottom: 10px;
+   margin-bottom: 10px;
 }
 
 iframe {
-    width: 100%; 
-    height: 50px;
-    border: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+   width: 100%; 
+   height: 80%;
+   border: none;
+   position: relative;
+   top: 0;
+   left: 0;
 }
 
+.sidebar {
+   display: none;
+   width: 250px;
+   background-color: #f9f9f9;
+   border: 2px solid var(--yellow);
+   border-radius: 10px;
+   height: 100vh;
+   position: fixed;
+   top: 10vh;
+   bottom: 10vh;
+   left: 10px;
+   overflow-y: auto;
+   padding: 10px;
+}.sidebar.active {
+   display: block;
+}
+
+.content {
+   margin-left: 260px; /* This should be slightly more than the sidebar width to create a gap */
+   padding: 20px;
+   flex: 1;
+}
+
+.hamburger-menu {
+   font-size: 24px;
+   position: fixed;
+   top: 10px;
+   left: 10px;
+   border: none;
+   cursor: pointer;
+}
+  
 .footnote {
-    font-size: 0.6em;
+   font-size: 0.6em;
 }
-
 
 #under-construction {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffcc00;
-    color: #000;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    font-size: 1.2em;
-    z-index: 15;
-    border: 2px solid #cc9900;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: var(--yellow);
+   color: #000;
+   display: flex;
+   align-items: center;
+   padding: 20px;
+   font-size: 1.2em;
+   z-index: 15;
+   border: 2px solid #cc9900;
+   border-radius: 10px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #close-button {
-    margin: 1px 0px 0px 10px;
-    background: #b28500;
-    border: none;
-    cursor: pointer;
-    color: #000;
+   margin: 1px 0px 0px 10px;
+   background: #b28500;
+   border: none;
+   cursor: pointer;
+   color: #000;
 }
 
 
 /* LaTeX */
 .math.inline {
-    display: inline;
+   display: inline;
 }
 
 .math.display {
-    display: block;
-    text-align: center;
-    margin: 10px 0;
+   display: block;
+   text-align: center;
+   margin: 10px 0;
 }.math.displayLeft {
-    display: block;
-    text-align: left;
-    margin: 10px 10px 10px 10px;
+   display: block;
+   text-align: left;
+   margin: 10px 10px 10px 10px;
 }
 
 /* table */
 table, th, td {
-    border-collapse: collapse;
-    padding: 5px;
-    text-align: left;
+   border-collapse: collapse;
+   padding: 5px;
+   text-align: left;
 }
 
 .tiles {
-    display: flex; /* flexbox */
-    justify-content: space-between; /* spacing */
-    margin-top: 20px;
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
 }
 
 .tile {
-    width: 30%; /* tile width */
-    border: 1px solid #ccc; /* border */
-    padding: 10px; /* visual */
-    border-radius: 5px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* shadow */
+   width: 30%; /* tile width */
+   border: 1px solid #ccc; /* border */
+   padding: 10px; /* visual */
+   border-radius: 5px;
+   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* shadow */
 }
 
 .tile h3 {
-    margin-top: 0;
+   margin-top: 0;
 }
 
 footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #777;
+   text-align: center;
+   margin-top: 20px;
+   color: #777;
 }
 
 /* button style */
 button {
-    border: none;
-    padding: 6px 10px;
-    background-color: #333;
-    color: white;
-    border: 1px solid #555;
-    border-radius: 10px;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
+   border: none;
+   padding: 6px 10px;
+   background-color: #333;
+   color: white;
+   border: 1px solid #555;
+   border-radius: 10px;
+   letter-spacing: 0.5px;
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+}  button:hover {
+   background-color: #555;
 }
 
 .button-container {
-    display: flex; /* place buttons inline */
-    gap: 8px; 
-    align-items: center; /* align with menus */
+   display: flex; /* place buttons inline */
+   gap: 8px; 
+   align-items: center; /* align with menus */
 }
 
 #home-button, #nav-button {
-    padding: 5px 10px;
-    background-color: #333;
-    color: white;
-    border: 2px solid #3a3a3a;
-    cursor: pointer;
+   padding: 5px 10px;
+   background-color: #333;
+   color: white;
+   border: 2px solid #3a3a3a;
+   cursor: pointer;
 }
 #home-button {   
-    margin-left: 10px; 
-    position: relative;
-    top: -5px; /* looks weird without! */
+   margin-left: 10px; 
+   position: relative;
+   top: -5px; /* looks weird without! */
 }
 
-#dark-mode-toggle:hover,
-#home-button:hover, #nav-button:hover {
-    background-color: #555;
-}
 
 body.dark-mode {
-    background-color: #181818;
-    color: white;
+   background-color: #181818;
+   color: white;
 }
 
 body.dark-mode #dark-mode-toggle {
-    background-color: #111;
-    cursor: pointer;
+   background-color: #111;
+   cursor: pointer;
 }
 
 body.dark-mode a {
-    color: #97b7ff;
+   color: #97b7ff;
 }
 
 body.dark-mode a:hover {
-    color: #ffffff;
+   color: #ffffff;
 }
 
 body.dark-mode h1,
@@ -195,69 +228,71 @@ body.dark-mode h4,
 body.dark-mode p,
 body.dark-mode li,
 body.dark-mode ol {
-    color: white;
+   color: white;
 }
 
 #header-js{
-    flex-wrap: nowrap; 
+   flex-wrap: nowrap; 
 }
 .nav-actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 24px;
+   display: flex;
+   align-items: center;
+   flex-wrap: nowrap;
+   gap: 24px;
 }.nav-actions a:hover {
-    text-decoration: underline;
-     color: #F5C754;
+   text-decoration: underline;
+    color: var(--yellow);
  }
 
 .nav-links {
-    display: flex;
-    flex: 1 1 auto;
-    align-items: center;
-    gap: 24px;
-    padding: 0;
-    list-style: none;
+   display: flex;
+   flex: 1 1 auto;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 24px;
+   padding: 0;
+   list-style: none;
 }
 
 .nav-link a {
-    font-style: normal;
-    font-weight: normal;
-    font-size: medium;
-    text-decoration: none;
-    color: black;
-    flex: 1 1 auto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: medium;
+   text-decoration: none;
+   color: black;
+   flex: 1 1 auto;
 }
 
 .dropdown {
-    position: relative;
-    flex: 1 1 auto;
+   position: relative;
+   flex: 1 1 auto;
 }
 
 .dropdown-content {
-    display: none;
-    background-color: white;
-    position: absolute;
-    right: 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+   display: none;
+   background-color: transparent;
+   position: absolute;
+   right: 0;
+   flex-direction: column;
+   gap: 4px;
+   z-index: 10;
 }
 
 .dropdown-content button {
-    text-align: left;
-    background-color: white;
-    color: black;
-    border: none;
-    padding: 10px 12px;
-    text-decoration: none;
-    display: block;
-    width: 100%;
+   text-align: right;
+   background-color: #333;
+   color: white;
+   border: none;
+   text-decoration: none;
+   display: block;
+   width: 100%;
 }
 
 .dropdown-content button:hover {
-    background-color: #ddd;
+   color: black;
+   background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+   display: flex;
 }
