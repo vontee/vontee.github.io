@@ -54,4 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
        sidebar.classList.toggle('active');
        content.classList.toggle('active');
    });
+
+   // dismissal close-button
+   const closeButtons = document.querySelectorAll('.close-button');
+   closeButtons.forEach(button => {
+       button.addEventListener('click', function() {
+           const targetId = button.getAttribute('data-target');
+           dismissElementById(targetId);
+       });
+    });
 });

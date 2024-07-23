@@ -1,0 +1,99 @@
+\documentclass{article}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{todonotes}
+\usepackage{multicol}
+
+% custom to-do states
+\newcommand{\toDo}[1]{\todo[color=black!40]{#1}}
+\newcommand{\inProgress}[1]{\todo[color=yellow!40]{In Progress: #1}}
+\newcommand{\deferred}[1]{\todo[color=blue!40]{Deferred: #1}}
+\newcommand{\done}[1]{\todo[color=green!40]{Done: #1}}
+
+\begin{document}
+
+\section*{Needs Done}
+
+\begin{itemize}
+    \item \toDo{ToC search}
+    \item \toDo{Word parts list (separate?)}
+\end{itemize}
+
+\section*{Word List}
+\begin{multicols}{3}
+\begin{itemize}
+    \item \toDo{Absolute (Value)}
+    \item \toDo{Analytic}
+    \item \toDo{Angle}
+    \item \toDo{Arithmetic}
+    \item \toDo{Axis}
+    \item \toDo{Calculus}
+    \item \toDo{Change}
+    \item \toDo{Complex Numbers}
+    \item \toDo{Composition}
+    \item \toDo{Continuity}
+    \item \toDo{Coordinate}
+    \item \toDo{Cosine}
+    \item \toDo{Data}
+    \item \toDo{Derivative}
+    \item \toDo{Difference}
+    \item \toDo{Domain}
+    \item \toDo{Equate}
+    \item \toDo{Elimination}
+    \item \toDo{Ellipse}
+    \item \toDo{Exponential}
+    \item \toDo{Fit}
+    \item \toDo{Fraction}
+    \item \toDo{Function}
+    \item \toDo{Geometry}
+    \item \toDo{Hyperbola}
+    \item \toDo{Identity}
+    \item \toDo{Inequality}
+    \item \toDo{Inverse}
+    \item \toDo{Limit}
+    \item \toDo{Linear}
+    \item \toDo{Logarithm}
+    \item \toDo{Matrix}
+    \item \toDo{Model}
+    \item \toDo{Notation}
+    \item \toDo{Parametric}
+    \item \toDo{Parabola}
+    \item \toDo{Periodic}
+    \item \toDo{Polar}
+    \item \toDo{Polynomial}
+    \item \toDo{Power}
+    \item \toDo{Preface}
+    \item \toDo{Principle}
+    \item \toDo{Probability}
+    \item \toDo{Product}
+    \item \toDo{Property}
+    \item \toDo{Quadratic}
+    \item \toDo{Radical}
+    \item \toDo{Range}
+    \item \toDo{Rate}
+    \item \toDo{Rational}
+    \item \toDo{Reduction}
+    \item \toDo{Right}
+    \item \toDo{Root}
+    \item \toDo{Rotation}
+    \item \toDo{Section}
+    \item \toDo{Sequence}
+    \item \toDo{Series}
+    \item \toDo{Sine}
+    \item \toDo{Solve}
+    \item \toDo{Sum}
+    \item \toDo{Theory}
+    \item \toDo{Transformation}
+    \item \toDo{Unit Circle}
+    \item \toDo{Variation}
+    \item \toDo{Vector}
+    \item \toDo{Zeros}
+\end{itemize}
+\end{multicols}
+
+\section*{ *last* }
+\inProgress{mobile viewpoint}
+\toDo{portable version}
+\toDo{hosting}
+\toDo{feedback portal}
+
+\end{document}
