@@ -120,6 +120,12 @@ iframe {
    color: #000;
 }
 
+#wiki-nav{
+   height: 100%;
+   max-width: 600px;
+   max-height: 1000px;
+}
+
 
 /* LaTeX */
 .math.inline {
@@ -146,6 +152,7 @@ table, th, td {
 .tiles {
    display: flex;
    justify-content: space-between;
+   gap: 1em;
    margin-top: 20px;
 }
 
@@ -271,22 +278,23 @@ body.dark-mode ol {
 .dropdown-content {
    display: none;
    flex-direction: column;
+   align-items: flex-end;
    background-color: transparent;
    position: absolute;
    right: 0;
    z-index: 10;
+
 }
 
 .dropdown-content button {
    text-align: right;
-
    margin: 4px;
    background-color: #333;
    color: white;
    border: none;
    text-decoration: none;
    display: block;
-   width: fit-content;
+   width: max-content;
 }
 
 .dropdown-content button:hover {

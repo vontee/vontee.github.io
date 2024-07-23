@@ -1,28 +1,33 @@
 <!doctype html>
 <html>
 <head>
-   <title>template</title>
+   <title>Acknowledgments</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-         tex2jax: {
-            inlineMath: ['\\(', '\\)']],
-            displayMath: ['\\[', '\\]']],
-            processEscapes: true
-         }
-      });
+   <link rel="stylesheet" type="text/css" href="../style.css">
+   <script>
+     MathJax = {
+       tex: {
+         inlineMath: [['\\(', '\\)'], ['\\[', '\\]']],
+         processEscapes: true
+      },
+      svg: {
+       fontCache: 'global'
+      }
+    };
    </script>
    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-   <link rel="stylesheet" type="text/css" href="../style.css">
-</head>
-<body>
-   <span id="header_js">
-   <div class="header-container">
-        <div id="under-construction">
-           <span>This page is under construction.</span>
-           <button id="close-button" onclick="dismiss('under-construction')"><b>╳</b></button>
-        </div>
-         <h1>Page Title
+  </head>
+  
+  <body>
+
+     <span id="header_js"></span>  
+     <div class="header-container">
+         <div id="under-construction">
+            <span>This page is under construction.</span>
+            <button id="close-button" onclick="dismiss('under-construction')"><b>╳</b></button>
+         </div>
+     <div class="header-container">
+         <h1>Acknowledgments
          <button id="home-button" onclick="location.href='../index.html'">Return Home</button>
          </h1>
          <h2 style="font-weight: normal;"><i>Page Subtitle</i></h2>
@@ -31,33 +36,31 @@
       </nav>
    </header>
    <main>
-      <div class="sidebar">
-         <iframe src="/pages/wiki-nav.html"></iframe>
-     </div>
+      <div class="sidebar"></div>
       <section>
-         <h2>Open Stax</h2>
-         <p>This wiki is a linguistic resource designed to help English Language Learners at Wichita State University learn vocabulary by connecting a word's everyday meaning to its specific meaning in mathmatics. These pages include definitions, examples, and links to outside resources.</p>
+         <h2>MURPA...</h2>
+         <p>This wiki ....</p>
       </section>
       <section>
          <h2> Team </h2>
-         <div class="tiles">
+         <div class="tiles" style="display: flex; flex-direction: column;">
             <div class="tile">
-               <h3><a href="pages/domain.html">Robert Fraser</a></h3>
-               <p> g </p>
+               <h3>Dr. Robert Fraser</h3>
+               <p> x </p>
             </div>
             <div class="tile">
-               <h3><a href="pages/function.html">Functions</a></h3>
-               <p>Explore different types of functions, their properties, and how they are used in mathematics.</p>
+               <h3>Dr. Mythili Menon</h3>
+               <p> y </p>
             </div>
             <div class="tile">
-               <h3><a href="pages/algebra.html">Algebra</a></h3>
-               <p>Get familiar with the language used to describe Algebraic equations.</p>
+               <h3>Alec Schon</h3>
+               <p>z</p>
             </div>
          </div>
       </section>
       <br>
       <section>
-         <h2>Getting Started</h2>
+         <h2>OpenStax</h2>
          <p>To begin exploring the math wiki, select a topic from the navigation menu above. Each page provides explanations, examples, and exercises to help master mathematical concepts.</p>
       </section>
    </main>
