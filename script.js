@@ -1,24 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
-   // LaTeX with mathjax
-   if (window.MathJax && MathJax.typesetPromise) {
-       MathJax.typesetPromise()
-           .then(() => {
-               console.log('MathJax typeset complete');
-           })
-           .catch(err => console.error('Error typesetting MathJax:', err));
-   }
+   //fetch head
+   fetch('head.html')
+   .then(response => {
+       if (!response.ok) {
+           throw new Error('Failed to load HTML Head');
+       } return response.text(); // error handling
+   }) 
+   .then(data => { // head.html -> 'data' -> innerHTML @ head_js
+       document.getElementById('head_js').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
 
    // fetch header
    fetch('header.html')
        .then(response => {
            if (!response.ok) {
-               throw new Error('Network response was not ok');
-           }
-           return response.text();
-       })
-       .then(data => {
+               throw new Error('Could not fetch header.');
+           } return response.text(); // error handling
+       }) 
+       .then(data => { // header.html -> 'data' -> innerHTML @ header_js
            document.getElementById('header_js').innerHTML = data;
+        //set page title
+        const pageTitle = document.title;
+        document.getElementById('page-title').innerText = pageTitle;
 
+        // header must load for dm toggle anyway
            document.getElementById('dark-mode-toggle').addEventListener('click', function() {
                if (document.body.classList.contains('dark-mode')) {
                    disableDarkMode();
@@ -47,15 +52,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
    // side menu
    const hamburgerMenu = document.getElementById('hamburger-menu');
-   const sidebar = document.querySelector('.sidebar');
-   const content = document.querySelector('.content');
+        const sidebar = document.querySelector('.sidebar');
+        const content = document.querySelector('.content');
 
    hamburgerMenu.addEventListener('click', function() {
        sidebar.classList.toggle('active');
        content.classList.toggle('active');
    });
 
-   // dismissal close-button
+   // dismiss with close-button
    const closeButtons = document.querySelectorAll('.close-button');
    closeButtons.forEach(button => {
        button.addEventListener('click', function() {
@@ -63,4 +68,3 @@ document.addEventListener('DOMContentLoaded', function() {
            dismissElementById(targetId);
        });
     });
-});

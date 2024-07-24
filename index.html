@@ -1,39 +1,42 @@
 <!doctype html>
 <html>
 <head>
+   <meta charset="UTF-8">
    <title>Math Wiki Homepage</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-   <header>
+   <header class="header-container">
       <nav>
          <div class="nav-actions">
-            <a href="/pages/acknowledgments.html"><h2>Math Language Wiki</h2></a>
-            <ul class="nav-links">
-               <li class="nav-link"><a href="nav.html">Table of Contents</a></li>
-            </ul>
-            <span class="button-container"> 
-            <div class="dropdown">
-                <button>Menu</button>
-                   <div class="dropdown-content">
-                      <button id="dark-mode-toggle">Dark Mode</button>
-                      <button><a href="/pages/acknowledgments.html">Acknowledgments</a></button>
-                   </div>
-               </div>
-               </span>
+           <div>
+              <a href="../index.html"><h2>Math Language Wiki</h2></a>
            </div>
-         <button id="hamburger-menu" class="hamburger-menu"> ☰ </button>
-         </div>
+              <ul class="nav-links">
+                 <li class="nav-link"><a href="../nav.html">Table of Contents</a></li>
+              </ul>
+              <span class="button-container"> 
+                 <div class="dropdown">
+                    <button>Menu</button>
+                    <div class="dropdown-content">
+                       <button id="dark-mode-toggle">Dark Mode</button>
+                       <button style="text-decoration: none;">Acknowledgments</button>
+                       <button class="hamburger-menu"> ☰ </button>
+                     </div>
+                 </div>
+              </span>
+           </div>
         </nav>
-      <div class="header-container">
-      <h1>Welcome to the Math Wiki</h1>
-      <h3 style="font-weight: normal;">A resource for English language learners in first-year mathematics courses</h3>
+        
+            <h1>Welcome to the Math Wiki</h1>
+          <h3 style="font-weight: normal;">A resource for English language learners in first-year mathematics courses</h3>
+      </div>
    </header>
 
    <main>
-      <div class="sidebar"></div>
+      <div class="sidebar"><iframe src="wiki-nav.html"></iframe></div>
       <section>
          <h2>About This Wiki</h2>
          <p>This wiki is a linguistic resource designed to help English Language Learners at Wichita State University learn vocabulary by connecting a word's everyday meaning to its specific meaning in mathmatics. These pages include definitions, examples, and links to outside resources.</p>
