@@ -35,10 +35,9 @@ p {
 a {
    color: #0066cc;
    text-decoration: none; /* remove underline */
-}
-
-a:hover {/* underline on hover */
+}  a:hover {/* underline on hover */
    text-decoration: underline;
+   color:var(--yellow);
 }
 
 ol {
@@ -52,7 +51,7 @@ ol li {
 
 iframe {
    width: 100%; 
-   height: 80%;
+   height: 90vh;
    border: none;
    position: relative;
    top: 0;
@@ -64,7 +63,7 @@ iframe {
    width: 260px;
    background-color: #f9f9f9;
    border: 2px solid var(--yellow);
-   border-radius: 10px;
+   border-radius: 20px;
    height: 100vh;
    position: fixed;
    top: 10vh;
@@ -104,7 +103,7 @@ iframe {
    font-size: 1.2em;
    z-index: 15;
    border: 2px solid #cc9900;
-   border-radius: 10px;
+   border-radius: 20px;
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -122,6 +121,16 @@ iframe {
    max-height: 1000px;
 }
 
+#searchInput{
+   padding: 6px 10px;
+   border: 2px solid #555;
+   border-radius: 20px;
+   letter-spacing: 0.5px;
+   cursor: text;
+} body.dark-mode #searchInput {
+   background-color: #181818;
+   color: white;
+}
 
 /* LaTeX */
 .math.inline {
@@ -156,7 +165,7 @@ table, th, td {
    width: 30%; /* tile width */
    border: 1px solid #ccc; /* border */
    padding: 10px; /* visual */
-   border-radius: 5px;
+   border-radius: 8px;
    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* shadow */
 }
 
@@ -170,14 +179,12 @@ footer {
    color: #777;
 }
 
-/* button style */
 button {
    border: none;
-   padding: 6px 10px;
+   padding: 8px 10px;
    background-color: #333;
    color: white;
-   border: 1px solid #555;
-   border-radius: 10px;
+   border-radius: 20px;
    letter-spacing: 0.5px;
    cursor: pointer;
    align-items: center;
@@ -192,13 +199,6 @@ button {
    align-items: center; /* align with menus */
 }
 
-#home-button, #nav-button {
-   padding: 5px 10px;
-   background-color: #333;
-   color: white;
-   border: 2px solid #3a3a3a;
-   cursor: pointer;
-}
 #home-button {   
    margin-left: 10px; 
    position: relative;
@@ -211,18 +211,10 @@ body.dark-mode {
    color: white;
 }
 
-body.dark-mode #dark-mode-toggle {
-   background-color: #111;
-   cursor: pointer;
-}
-
 body.dark-mode a {
    color: #97b7ff;
 }
 
-body.dark-mode a:hover {
-   color: #ffffff;
-}
 
 body.dark-mode h1,
 body.dark-mode h2,
@@ -238,16 +230,18 @@ body.dark-mode ol {
    flex-wrap: nowrap; 
 }
 .nav-actions {
+
    display: flex;
    align-items: center;
    flex-wrap: nowrap;
    gap: 24px;
 }.nav-actions a:hover {
+   color:var(--yellow);
    text-decoration: underline;
-    color: var(--yellow);
- }
+}
 
 .nav-links {
+   color: var(--yellow);
    display: flex;
    flex: 1 1 auto;
    align-items: center;

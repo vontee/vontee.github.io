@@ -6,22 +6,44 @@
       <title>Wiki Navigation</title>
       <link rel="stylesheet" href="../style.css">
       <script>
-          document.addEventListener('DOMContentLoaded', function() {
-              // Find all links and set their target attribute to _parent
-              const links = document.querySelectorAll('a');
-              links.forEach(link => {
-                  link.setAttribute('target', '_parent');
-              });
-          });
-      </script>
-  </head>
-<main id="wiki-nav">
-   <h2>Wiki Navigation</h2>
-   <h3><a href="absolute_value.html">Absolute (Value)</a></h3>
-   <h3><a href="algebra.html">Algebra</a></h3>
-   <h3><a href="analytic.html">Analytic</a></h3>
-   <h3><a href="angle.html">Angle</a></h3>
-   <h3><a href="arithmetic.html">Arithmetic</a></h3>
+         document.addEventListener('DOMContentLoaded', function() {
+            // open links outside iframe
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                link.setAttribute('target', '_parent');
+            });
+
+            // search
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('nav-button');
+            const linkContainer = document.getElementById('linkContainer');
+            const linksArray = Array.from(linkContainer.getElementsByTagName('h3'));
+
+            searchButton.addEventListener('click', function() {
+               const searchTerm = searchInput.value.toLowerCase();
+               linksArray.forEach(link => {
+                  const linkText = link.textContent.toLowerCase();
+                     if (linkText.includes(searchTerm)) {
+                        link.style.display = '';
+                     } else {
+                        link.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<main>
+   <h2>Wiki Navigation <input type="text" id="searchInput" placeholder="Search">
+    <button id="nav-button">🔎︎</button></h2>
+
+   <ul id="linkContainer">
+      <h3><a href="absolute_value.html">Absolute (Value)</a></h3>
+      <h3><a href="algebra.html">Algebra</a></h3>
+      <h3><a href="analytic.html">Analytic</a></h3>
+      <h3><a href="angle.html">Angle</a></h3>
+      <h3><a href="arithmetic.html">Arithmetic</a></h3>
    <h3><a href="axis.html">Axis</a></h3>
    <h3><a href="calculus.html">Calculus</a></h3>
    <h3><a href="change.html">Change</a></h3>
@@ -86,4 +108,5 @@
    <h3><a href="zeros.html">Zeros</a></h3>
 </ul>
 </main>
+</body>
 </html>
