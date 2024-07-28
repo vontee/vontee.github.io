@@ -105,6 +105,7 @@ iframe {
 }
 
 #close-button {
+   font-style: bold;
    margin: 1px 0px 0px 10px;
    background: #b28500;
    border: none;
