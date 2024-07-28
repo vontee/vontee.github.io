@@ -6,32 +6,31 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="../style.css">
       <script>
-         document.addEventListener('DOMContentLoaded', function() {
-            // open links outside iframe
-            const links = document.querySelectorAll('a');
-            links.forEach(link => {
-                link.setAttribute('target', '_parent');
-            });
+      document.addEventListener('DOMContentLoaded', function() {
+         document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+            if (document.body.classList.contains('dark-mode')) {
+               disableDarkMode();
+            } else {
+               enableDarkMode();
+            }
+         });
 
-            // search
-            const searchInput = document.getElementById('searchInput');
-            const searchButton = document.getElementById('nav-button');
-            const linkContainer = document.getElementById('linkContainer');
-            const linksArray = Array.from(linkContainer.getElementsByTagName('h3'));
-
-            searchButton.addEventListener('click', function() {
-               const searchTerm = searchInput.value.toLowerCase();
-               linksArray.forEach(link => {
-                  const linkText = link.textContent.toLowerCase();
-                     if (linkText.includes(searchTerm)) {
-                        link.style.display = '';
-                     } else {
-                        link.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+         function enableDarkMode() {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+         }
+      
+         function disableDarkMode() {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+         }
+      
+         // dm check
+         if (localStorage.getItem('darkMode') === 'enabled') {
+            enableDarkMode();
+         }
+      });
+   </script>
 </head>
 <body>
 <main>

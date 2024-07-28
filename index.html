@@ -5,24 +5,59 @@
    <title>Math Wiki Homepage</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" type="text/css" href="style.css">
-   <script src="script.js"></script>
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+         if (document.body.classList.contains('dark-mode')) {
+            disableDarkMode();
+         } else {
+            enableDarkMode();
+         }
+      });
+
+      function enableDarkMode() {
+         document.body.classList.add('dark-mode');
+         localStorage.setItem('darkMode', 'enabled');
+      }
+   
+      function disableDarkMode() {
+         document.body.classList.remove('dark-mode');
+         localStorage.setItem('darkMode', 'disabled');
+      }
+   
+      // dm check
+      if (localStorage.getItem('darkMode') === 'enabled') {
+         enableDarkMode();
+      }
+   
+      // side menu
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+         const sidebar = document.querySelector('.sidebar');
+         const content = document.querySelector('.content');
+  
+      hamburgerMenu.addEventListener('click', function() {
+         sidebar.classList.toggle('active');
+         content.classList.toggle('active');
+      });
+   });
+   </script>
 </head>
 
 <body>
    <header class="header-container">
       <nav class="nav-actions">
-              <a href="../index.html"><h2>Math Language Wiki</h2></a>
+              <a href="/index.html"><h2>Math Language Wiki</h2></a>
               <ul class="nav-links">
-                 <li class="nav-link"><a href="../nav.html">Table of Contents</a></li>
+                 <li class="nav-link"><a href="/pages/wiki-nav.html">Table of Contents</a></li>
               </ul>
                <span class="button-container"> 
                   <div class="dropdown">
-                     <button>☰</button>
+                     <button id="hamburger-menu" class="hamburger-menu"> ☰</button>
                      <div class="dropdown-content">
                          <button id="dark-mode-toggle">Dark Mode</button>
-                         <button style="text-decoration: none;">Acknowledgments</button>
-                         <button id="hamburger-menu" class="hamburger-menu"> Menu </button>
-                         <div class="sidebar"><iframe src="wiki-nav.html"></iframe></div>
+                         <button href="/pages/acknowledgments.html">Acknowledgments</button>
+                         <button > Menu </button>
+                         <div class="sidebar"><iframe src="nav.html"></iframe></div>
                      </div>
                   </div>
               </span>

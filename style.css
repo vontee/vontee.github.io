@@ -51,7 +51,7 @@ ol li {
 
 iframe {
    width: 100%; 
-   height: 90vh;
+   height: 75vh;
    border: none;
    position: relative;
    top: 0;
@@ -59,12 +59,12 @@ iframe {
 }
 
 .sidebar {
-   display: none;
-   width: 260px;
+   display: block;
+   width: 300px;
    background-color: #f9f9f9;
    border: 2px solid var(--yellow);
    border-radius: 20px;
-   height: 100vh;
+   height: 77vh;
    overflow-y: auto;
    padding: 10px;
 }.sidebar.active {
@@ -115,6 +115,7 @@ iframe {
 
 #searchInput{
    padding: 6px 10px;
+   margin: 0 2px 15px;
    border: 2px solid #555;
    border-radius: 20px;
    letter-spacing: 0.5px;
@@ -172,6 +173,7 @@ footer {
 }
 
 button {
+   text-decoration: none;
    border: none;
    padding: 8px 10px;
    background-color: #333;
