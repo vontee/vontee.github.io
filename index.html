@@ -5,42 +5,6 @@
    <title>Math Wiki Homepage</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" type="text/css" href="style.css">
-   <script>
-   document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-         if (document.body.classList.contains('dark-mode')) {
-            disableDarkMode();
-         } else {
-            enableDarkMode();
-         }
-      });
-
-      function enableDarkMode() {
-         document.body.classList.add('dark-mode');
-         localStorage.setItem('darkMode', 'enabled');
-      }
-   
-      function disableDarkMode() {
-         document.body.classList.remove('dark-mode');
-         localStorage.setItem('darkMode', 'disabled');
-      }
-   
-      // dm check
-      if (localStorage.getItem('darkMode') === 'enabled') {
-         enableDarkMode();
-      }
-   
-      // side menu
-      const hamburgerMenu = document.getElementById('hamburger-menu');
-         const sidebar = document.querySelector('.sidebar');
-         const content = document.querySelector('.content');
-  
-      hamburgerMenu.addEventListener('click', function() {
-         sidebar.classList.toggle('active');
-         content.classList.toggle('active');
-      });
-   });
-   </script>
 </head>
 
 <body>
@@ -48,16 +12,15 @@
       <nav class="nav-actions">
               <a href="/index.html"><h2>Math Language Wiki</h2></a>
               <ul class="nav-links">
-                 <li class="nav-link"><a href="/pages/wiki-nav.html">Table of Contents</a></li>
+                 <li class="nav-link"><a href="toc.html">Table of Contents</a></li>
               </ul>
                <span class="button-container"> 
                   <div class="dropdown">
-                     <button id="hamburger-menu" class="hamburger-menu"> ☰</button>
+                     <button id="hamburger-menu" class="hamburger-menu"> ☰ </button>
                      <div class="dropdown-content">
                          <button id="dark-mode-toggle">Dark Mode</button>
-                         <button href="/pages/acknowledgments.html">Acknowledgments</button>
-                         <button > Menu </button>
-                         <div class="sidebar"><iframe src="nav.html"></iframe></div>
+                         <button onclick="location.href='/pages/acknowledgments.html'">Acknowledgments</button>
+                         <div class="sidebar"><iframe src="/pages/nav.html"></iframe></div>
                      </div>
                   </div>
               </span>
@@ -93,13 +56,55 @@
       </section>
       <br>
       <section>
-         <h2>Getting Started</h2>
+         <h2>Get Started <button class="inlineButton" onclick="location.href='/pages/get-started.html'"><img src="/images/external grad cap.svg" alt="external link icon" height="10em"></button></h2>
          <p>To begin exploring the math wiki, select a topic from the navigation menu above. Each page provides explanations, examples, and exercises to help master mathematical concepts.</p>
       </section>
    </main>
    <footer>
       <p>&copy; 2024 Wichita State University.</p>
    </footer>
-   <script src="script.js"></script>
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+            if (document.body.classList.contains('dark-mode')) {
+               disableDarkMode();
+            } else {
+               enableDarkMode();
+            }
+         });
+   
+         function enableDarkMode() {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+         }
+      
+         function disableDarkMode() {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+         }
+      
+         // dm check
+         if (localStorage.getItem('darkMode') === 'enabled') {
+            enableDarkMode();
+         }
+      
+         // side menu
+         const hamburgerMenu = document.getElementById('hamburger-menu');
+         const sidebar = document.querySelector('.sidebar');
+         const content = document.querySelector('.content');
+         const dropdownContent = document.querySelector('.dropdown-content');
+
+         hamburgerMenu.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            content.classList.toggle('active');
+         });
+   
+
+
+
+         
+});
+
+   </script>
 </body>
 </html>

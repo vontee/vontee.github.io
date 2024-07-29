@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>Table of Contents</title>
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../style.css">
+   </head>
+      
+   <body style="max-width: 600px;">
+      <header>
+         <nav>
+            <div class="nav-actions">
+               <a href="index.html"><h2>Math Language Wiki</h2></a>
+               <ul class="nav-links">
+                  <!--  -->
+               </ul>
+               <span class="button-container">
+                  <button id="dark-mode-toggle">Dark Mode</button>
+               </span>
+            </div>
+         </nav>
+         <div class="header-container">
+            <h1 id="page-title"> </h1>
+         </div>
+      </header>
+      
+      <main>
+         <iframe src="/pages/nav.html" style="height: 90vh;"> </iframe>
+      </main>
+
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+               if (document.body.classList.contains('dark-mode')) {
+                  disableDarkMode();
+               } else {
+                  enableDarkMode();
+               }
+            });
+
+            function enableDarkMode() {
+               document.body.classList.add('dark-mode');
+               localStorage.setItem('darkMode', 'enabled');
+            }
+         
+            function disableDarkMode() {
+               document.body.classList.remove('dark-mode');
+               localStorage.setItem('darkMode', 'disabled');
+            }
+         
+            // dm check
+            if (localStorage.getItem('darkMode') === 'enabled') {
+               enableDarkMode();
+            }
+         })
+      </script>
+   </body>
+</html>
