@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Absolute Value</title>
+   <script src="load-mathjax.js" async></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+   <span id="header_js"> </span>
+   <div id="under-construction">This page is under construction!
+      <button id="close-button" data-target="under-construction" class="close-button">╳</button> 
+   </div>
+   <main>
+   <h2>Everyday usage and use in mathematics</h2>
+<p> The word <b>absolute</b> in everyday English means means "total" or "complete." The Oxford English Dictionary provides many definitions for the word <b>absolute</b> <a href="#footnote-1" class="footnote">[1]</a> such as "Free from dependency, autonomous; not relative" or "Complete, perfect." 
+
+<p> For example, an <i>absolute monarch</i> is a ruler who has total control over their country. The term <i>absolute zero</i> refers to the smallest possible temperature and a complete lack of atomic movement.
+
+<p> The term <i>absolute value</i> is used in two related ways in mathematics. The first meaning of absolute value is the <b>absolute value of a real number</b>. The absolute value of a real number is the <a href="piecwise-function.html">piecewise function</a> given by the formula
+\[|x| = \begin{cases}
+ x & \text{if $x \geq 0$} \\
+-x & \text{if $x < 0$.} \end{cases} \]
+The absolute value captures the size of a number wihtout regard to whether the number is positive or negative. The absolute value $|x|$ of $x$ is the distance from $x$ to zero on a number line.
+
+<p> The term <i>absolute value</i> is also used to refer to the <b>absolute value of a complex number</b>. This is sometimes referred to as the <b>modulus.</b> If $a + bi$ is a <a href="complex-number.html">complex number</a>, then the absolute value of $a + bi$ is given by the formula
+\[|a + bi| = \sqrt{a^2 + b^2}.\]
+The absolute value of a complex number is the distance from the complex number to zero in the complex plane.
+    <h3>Summary</h3>
+The term <b>absolute value</b> captures the total distance of a number to zero without regard to whether the number is positive, negative, or complex. 
+      <h2>Importance in mathematics</h2>
+	The absolute value function is important when describing the size of a change without regard to whether the change is positive or negative.  For example, an <a href="interval.html">interval</a> $(a,b)$ is the set of points satisfying the inequality 
+\[\left|x - \frac{a + b}{2} \right| \leq \frac{b - a}{2}.\]
+For this reason, absolute values are useful in describing bounds on the error in measuring a quantity. 
+	In the complex plane, absolute value inequalities are used to describe discs rather than intervals. If $x_0 + i y_0$ is a complex number, then the set of complex numbers $x + i y$ satisfying the inequality 
+\[|(x + i y) - (x_0 + i y_0)| < r\]
+is a disc of radius $r$ centered at the point $(x_0, y_0)$.
+      <h2>Exercises</h2>
+      <ol>
+	<li>Give a definition of the word <i>absolute</i>. Is there a similar term in your native language? 
+	<li>Compare the use of absolute in <b>absolute value</b> and the use of the word absolute in <a href=absolute-maximum-and-minimum>absolute maximum</a>
+	<li>Describe the set of real numbers $x$ that satisfy the absolute value inequality $|x - 3| \geq 5$.
+      </ol>
+
+      <h2>References</h2>
+
+      <p id="footnote-1">[1] Oxford English Dictionary</p>
+   </main>
+
+   <footer>
+      <p>&copy; 2024 Wichita State University.</p>
+   </footer>
+
+   <script src="../script.js"></script>
+</body>
+</html>
