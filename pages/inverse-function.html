@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Inverse Function</title>
+   <script src="load-mathjax.js" async></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+   <span id="header_js"> </span>
+   <div id="under-construction">This page is under construction!
+      <button id="close-button" data-target="under-construction" class="close-button">╳</button> 
+   </div>
+   <main>
+   <h2>Everyday usage and use in mathematics</h2>
+     <p>In everyday English, The <i>inverse</i> of something is an opposite. The Oxford English Dictionary<a href="#footnote-1" class="footnote">[1]</a> defines <i>inverse</i> as "The opposite or contrary of something; esp. a situation, process, state of affairs, etc., which is the reverse of that which has been previously stated or described." For example, you might say "At age 5, Sarah was taller than Jane; at age 8 the inverse was true." This means that age 8, Jane was taller than Sarah. 
+	<p>In mathematics, an <b>inverse function</b> is a function that "undoes" another function. For example, the inverse of the function $f(x) = 3x + 9$ is $f^{-1}(y) = \frac{y - 9}{3}$. squaring a number is taking the square root. A function that has an inverse is called an <b>invertible function.</b> 
+	<p> The mathematical term <b>inverse function</b> is related to the everyday definition of the word inverse in the case of a process or a procedure. For example, the inverse of tying your shoes is untying your shoes. If you untie your shoes, this "undoes" the process of tying your shoes. If you square a positive number and then take the square root of the result, you get the original number back.
+      <h3>Summary</h3>
+	In everyday english, an inverse is an opposite situation or process. In mathematics, an inverse function "undoes" a function. 
+      <h2>Importance in mathematics</h2>
+<p>Inverse functions are important for solving problems where you're presented the "opposite" of the usual type of information you're given in a problem. For example, let's say you know  that a dropped ball is at height $h = f(t)$ at time $t$. If you need to figure out time $t$ when the ball reaches a certain height $h$, you need to find the <b>inverse</b> of a function
+$f$. The inverse of the function $f$ is usually written as $f^{-1}$.
+	Certain inverse functions are so important that they are given special names. The inverse of an <a href="exponential-function">exponential function</a> is a <a href=logarithm.html>logarithmic function</a>. The inverse of the <a href="trigonometric-functions.html">sine function</a> is the <a href="inverse-trigonometric-functions.html">arcsine function</a> 
+	In order for a function to be invertible, it must be a <a href="one-to-one-function.html">one-to-one function</a>. For example, the function $g(x) = x^2$ is not one-to-one on the domain $(-\infty, \infty)$ because $g(-3) = g(3) = 9$. Hence, there can't be a well-defined value for $g^{-1}(9)$: it's not clear whether it should be $3$ or $-3$.
+
+     <h2>Exercises</h2>
+      <ol>
+	<li> In everyday english, what is the inverse of driving to work?
+	<li> Suppose $f$ is an invertible function and that $f(3) = 5$. What is $f^{-1}(5)$?
+      </ol>
+
+      <h2>References</h2>
+
+      <p id="footnote-1">[1] Oxford English Dictionary</p>
+   </main>
+
+   <footer>
+      <p>&copy; 2024 Wichita State University.</p>
+   </footer>
+
+   <script src="../script.js"></script>
+</body>
+</html>
