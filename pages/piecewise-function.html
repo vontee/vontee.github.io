@@ -10,53 +10,62 @@
 
 <body>
    <span id="header_js"> </span>
-   <div id="under-construction">This page is under construction!
-      <button id="close-button" data-target="under-construction" class="close-button">╳</button> 
-   </div>
+
    <main>
-   <h2>Everyday usage and use in mathematics</h2>
-	<p>The word <b>piecewise</b> is not frequently used in everyday English. However, a common construction in the English language is to use the suffix "-wise" to indicate that something is being done in a specific manner. For example, if a piece of paper is folded <i>lengthwise</i>, this means that the paper is folded along a line parallel to the longer side of the paper. As another example, something moving <i>clockwise</i> is moving in the same direction as the hands of a clock. </p>
+      <h2>Everyday usage and use in mathematics</h2>
+	   <p>The word <b>piecewise</b> is not frequently used in everyday English. However, a common construction in the English language is to use the suffix "-wise" to indicate that something is being done in a specific manner. For example, if a piece of paper is folded <i>lengthwise</i>, this means that the paper is folded along a line parallel to the longer side of the paper. As another example, something moving <i>clockwise</i> is moving in the same direction as the hands of a clock. </p>
 
-	<p>In informal English, the suffix "-wise" can be attached to a noun or even a noun phrase. For example, a student who is doing well on the homework in a course but struggling with exams might say "Homeworkwise, this class is going well. Examwise, not so much."  </p>
+	   <p>In informal English, the suffix "-wise" can be attached to a noun or even a noun phrase. For example, a student who is doing well on the homework in a course but struggling with exams might say "Homeworkwise, this class is going well. Examwise, not so much."  </p>
 
-	In mathematics, a <b>Piecewise function</b> is a function that is defined differently at different parts of the domain. The domain is split up into pieces, and on each piece, the function has a different definition. 
+	   <p>In mathematics, a <b>Piecewise function</b> is a function that is defined differently at different parts of the domain. The domain is split up into pieces, and on each piece, the function has a different definition. </p>
 
-An example of a piecewise function is the function $f$ defined by 
+      <p>An example of a piecewise function is the function $f$ defined by 
 
-\[f(x) = \begin{cases}
-5 & \text{if x $\leq 3$} \\
-x + 4 & \text{if $x > 3$}.
-\end{cases}\]
+         \[
+            f(x) = \begin{cases}
+            5 & \text{if $x \leq 3$} \\
+            x + 4 & \text{if $x > 3$}
+            \end{cases}
+         \]
 
-Such a function is called <b>piecewise</b> because the definition of the function at a point $x$ in the domain is according to which piece of the domain $x$ belongs to. Imagine splitting the number line into two pieces: one piece where $x \leq 3$ and another piece where $x > 3$. The function has a different definition on each piece, so we call the function a <b>piecewise function</b>
-      
+         Such a function is called <b>piecewise</b> because the definition of the function at a point $x$ in the domain is according to which piece of the domain $x$ belongs to. Imagine splitting the number line into two pieces: one piece where $x \leq 3$ and another piece where $x > 3$. The function has a different definition on each piece, so we call the function a <b>piecewise function</b>
+      </p>
+         
       <h3>Summary</h3>
-	The suffix "-wise" in English is used to used to indicate that something is done in a certain manner. In mathematics, a <b>piecewise function</b> is a function that is defined differently on different pieces of the domain.
-      <h2>Importance in mathematics</h2>
-	Piecewise functions are important in describing things that are subject to a sudden change.  For example, imagine a function $g(t)$ that describes the height of a ball held from a window $19.6$ meters above the ground. Suppose that at time $t = 5$, the ball is released. Then the height of the ball might be given by the function
-\[g(t) = \begin{cases}
-	19.6  & \text{if $t \leq 5$ } \\
-	19.6 - 4.9 (t - 5)^2 & \text{if $5 < t < 7$ } \\
-	0 & \text{if $t \geq 7$}. 
-	\end{cases}
-\]
-Before the time $t = 5$, the ball has not been released, so its height remains at $19.6$ meters. At the time $t = 5$, the ball is released, so it starts moving downward. At the time $t = 7$, the ball hits the ground, so it stops moving.
+	   <p>The suffix "-wise" in English is used to used to indicate that something is done in a certain manner. In mathematics, a <b>piecewise function</b> is a function that is defined differently on different pieces of the domain.</p>
+      <br>
 
-The <a href="absolute-value.html">absolute value</a> function is the piecewise function defined by
-\[ |x| = \begin{cases}
-x & \text{if $x \geq 0$} \\
--x & \text{if $x < 0$}.
-\end{cases}\]
-The absolute value function is used throughout mathematics, particularly when describing distances.
+      <h2>Importance in mathematics</h2>
+	   <p>Piecewise functions are important in describing things that are subject to a sudden change.  For example, imagine a function $g(t)$ that describes the height of a ball held from a window $19.6$ meters above the ground. Suppose that at time $t = 5$, the ball is released. Then the height of the ball might be given by the function
+         \[
+            g(t) = \begin{cases}
+            19.6  & \text{if $t \leq 5$ } \\
+            19.6 - 4.9 (t - 5)^2 & \text{if $5 < t < 7$ } \\
+            0 & \text{if $t \geq 7$}. 
+            \end{cases}
+         \]
+         Before the time $t = 5$, the ball has not been released, so its height remains at $19.6$ meters. At the time $t = 5$, the ball is released, so it starts moving downward. At the time $t = 7$, the ball hits the ground, so it stops moving.
+      </p>
+
+      <p>The <a href="absolute-value.html">absolute value</a> function is the piecewise function defined by
+         \[
+            |x| = \begin{cases}
+            x & \text{if $x \geq 0$} \\
+            -x & \text{if $x < 0$}.
+            \end{cases}
+         \]
+         The absolute value function is used throughout mathematics, particularly when describing distances.
+      </p>
+
       <h2>Exercises</h2>
       <ol>
-	<li>Describe the use of the suffix "-wise" in English. Rephrase the following sentence without using "-wise": "Applewise, this was a good year for the orchard."
-	<li>A $60$ watt lightbulb is turned on at time $t = 2$ seconds and turned off at time $t = 8$ seconds. Give a piecewise function describing the brightness of the lightbulb at time $t$.
+	      <li>Describe the use of the suffix "-wise" in English. Rephrase the following sentence without using "-wise": "Applewise, this was a good year for the orchard."
+	      <li>A $60$ watt lightbulb is turned on at time $t = 2$ seconds and turned off at time $t = 8$ seconds. Give a piecewise function describing the brightness of the lightbulb at time $t$.
       </ol>
 
       <h2>References</h2>
-
       <p id="footnote-1">[1] Oxford English Dictionary</p>
+
    </main>
 
    <footer>
