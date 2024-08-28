@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <title>Compound</title>
+   <title>Compound Interest</title>
    <script src="load-mathjax.js" async></script>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,26 +12,45 @@
    <span id="header_js"></span>
    <main>
       <h2>Everyday Usage and Use in Mathematics</h2>
-      <p>Compound in everyday language typically refers to something made up of two or more parts, like a compound word ("notebook") or a compound substance (water is a compound of hydrogen and oxygen).</p>
+      <p>Compound in everyday language typically refers to something made up of two or more parts, like a compound word ("notebook") or a compound substance (water is a compound of hydrogen and oxygen). The word interest refers to money paid in exchange for a loan.</p>
 
-      <h2>Meaning Within Mathematics</h2>
-      <p>In mathematics, particularly in finance, compound primarily refers to the concept of compound interest. This is a method of calculating interest where the interest earned over time is added to the principal, and future interest calculations are based on this increased amount.</p>
+      <p>In mathematics and finance, <b>compound interest</b> is a method of calculating interest where the interest earned over time is added to the principal, and future interest calculations are based on this increased amount. Each time the interest is caclulated and paid out, the interest is said to have been <b>compounded</b>. </p> 
+
+      <p>The term compound interest emphasizes that the interest is paid both for the principal and on the interest that has already been earned.
+
+	<h2>Importance in mathematics</h2>
+	<p>Compound interest contrasts with <b>simple interest</b>, which is paid only on the principal and not on the interest.
 
       <p>The formula for compound interest is:</p>
       <p class="math display">\[ A = P \left(1 + \frac{r}{n}\right)^{nt} \]</p>
       <ul>
-         <li><b>A:</b> The amount of money accumulated after n years, including interest.</li>
-         <li><b>P:</b> The principal amount.</li>
-         <li><b>r:</b> The annual interest rate (as a decimal).</li>
-         <li><b>n:</b> The number of times interest is compounded per year.</li>
-         <li><b>t:</b> The time the money is invested or borrowed for, in years.</li>
+where
+         <li><b>A</b> is the amount of money accumulated after t years, including interest.</li>
+         <li><b>P</b> is the principal amount.</li>
+         <li><b>r</b> is the annual interest rate (as a decimal).</li>
+         <li><b>n</b> is the number of times interest is compounded per year.</li>
+         <li><b>t</b> is the time the money is invested or borrowed for, in years.</li>
       </ul>
 
-      <p>This concept illustrates the exponential growth of investments or debts over time due to the repeated application of interest on an ever-growing principal.</p>
+      <p>This concept illustrates the exponential growth of investments or debts over time due to the repeated application of interest on an ever-growing principal. When applying the compound interest formula, $t$ should always be a multiple of $1/n$, when the interest is compounded.</p> 
+	
+	There is also a notion of <b>continuously compounded interest</b>, in which the interest is compounded at every moment in time. The formula for continuously compounded interest is
+	<p class="math display">\[ A = P e^{rt}\]</p>
+where
+	<ul>
+         <li><b>A</b> is the amount of money accumulated after $t$ years, including interest</li>
+         <li><b>P</b> is the principal amount.</li>
+         <li><b>r</b> is the annual interest rate (as a decimal).</li>
+         <li><b>t</b> is the time the money is invested or borrowed for, in years.</li>
 
-      <h2>Summary</h2>
-      <p>Compound in mathematics, particularly in finance, is closely associated with the concept of compound interest, where interest is calculated on both the initial principal and the interest that has already been added, leading to exponential growth.</p>
+	<p>When applying the continuous compound interest formula, $t$ can be any positive real number, since the interest is compounded at every moment.
    </main>
+
+	<h2>Exercises</h2>
+	<ul>
+	<li>Explain the difference between simple and compound interest in English and in your native language.</li>
+	<li>Suppose that you invest $\$1000$ in an account that pays simple interest at a yearly rate of $5\%$. How long will it take for the account to reach a value of $\$2000$? What if instead of paying simple interest, the account pays compound interest, compounded yearly?</li>
+	
 
    <footer>
       <p>&copy; 2024 Wichita State University.</p>
