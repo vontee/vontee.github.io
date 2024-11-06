@@ -3,8 +3,8 @@
 @import url('/font/font.css');
 
 :root {
-    --light-yellow: #ffda48e3;
-    --dark-yellow:   #ffd000ee;
+    --light-yellow: #ffda48;
+    --dark-yellow:   #ffd000;
 }
 
 body {
@@ -211,11 +211,11 @@ table, th, td {
 }
 
 .tile {
-    width: 30%; /* tile width */
-    border: 1px solid #ccc; /* border */
-    padding: 10px; /* visual */
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px 12px 4px;
     border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* shadow */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tile h3 {
