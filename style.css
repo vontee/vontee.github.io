@@ -20,7 +20,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Segoe UI Variable Display','Segoe UI','Open Sans', sans-serif;
     color: black;
-    margin: 0 0 10px;
+    margin: 12px 0;
     line-height: 1.2;
 }   h1 { font-size: 2em; }
     h2 { font-size: 1.6em; }
@@ -264,6 +264,7 @@ body.dark-mode ol {
     flex: 1 1 auto;
     align-items: center;
     justify-content: flex-end;
+    flex-wrap: wrap;
     gap: 24px;
     padding: 0;
     list-style: none;
@@ -276,6 +277,7 @@ body.dark-mode ol {
     text-decoration: none;
     color: black;
     flex: 1 1 auto;
+    flex-wrap: nowrap;
 }
 
 .dropdown {
