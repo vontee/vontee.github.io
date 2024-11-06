@@ -1,6 +1,6 @@
 /* ( trbl , tb-lr , t-lr-b ) */
 
-@import url('/font/font.css');
+@import url('font/font.css');
 
 :root {
     --light-yellow: #ffda48;
@@ -8,35 +8,29 @@
 }
 
 body {
-    max-width: 800px; /* max-width */
+    max-width: 800px;   /* page width */
     overflow: visible;
-    margin: 0 auto; /* centered */
-    padding: 15px; /* readability */
-    font-family: 'Segoe UI Variable Text', sans-serif; /* personal favorite, adjustable later */
+    margin: 0 auto;     /* centered */
+    padding: 15px;      /* readability */
+    font-family: 'Segoe UI Variable Text','Segoe UI','Open Sans', sans-serif; /* personal favorite, adjustable later */
+    line-height: 1.6;   /* readability */
+    color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Segoe UI Variable Display', sans-serif;
+    font-family: 'Segoe UI Variable Display','Segoe UI','Open Sans', sans-serif;
     color: black;
     margin: 0 0 10px;
     line-height: 1.2;
-} h1 {
-    font-size: 2.2em;
-} h2 {
-    font-size: 1.6em;
-} h3 {
-    font-size: 1.4em;
-}
+}   h1 { font-size: 2em; }
+    h2 { font-size: 1.6em; }
+    h3 { font-size: 1.4em; }
 
-p {
-    line-height: 1.6; /* readability */
-    color: black;
-}
 
 a {
     color: #0066cc;
-    text-decoration: none; /* remove underline */
-}  a:hover { /* underline on hover */
+    text-decoration: none;  /* remove underline */
+}   a:hover {               /* underline on hover */
     text-decoration: underline;
     color: var(--dark-yellow);
 }
@@ -50,9 +44,7 @@ ol li {
     margin-bottom: 10px;
 }
 
-table {
-    margin: 10px 0 15px;
-}
+table { margin: 10px 0 15px; }
 
 button {
     text-decoration: none;
@@ -65,9 +57,9 @@ button {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-} button:hover {
-   color: black;
-   background-color: var(--dark-yellow);
+}   button:hover {
+    color: black;
+    background-color: var(--dark-yellow);
 }
 
 iframe {
@@ -89,30 +81,23 @@ iframe {
     height: 61vh;
     overflow-y: auto;
     padding: 10px;
-}
-.sidebar.active {
-    display: block;
-}
-body.dark-mode .sidebar {
+}   body.dark-mode .sidebar {
     background-color: #181818;
     color: white;
 }
 
 ::-webkit-scrollbar {
-   width: 8px;
- }
+   width: 8px; }
  ::-webkit-scrollbar-track {
    background: transparent;
    margin: 50px;
-   border-radius: 50px;
- }
+   border-radius: 50px; }
  ::-webkit-scrollbar-thumb {
    background: #888;
-   border-radius: 50px;
- }
+   border-radius: 50px; }
  ::-webkit-scrollbar-thumb:hover {
    background: #555;
- }
+}
 
 .content {
     margin-left: 260px;
@@ -121,8 +106,8 @@ body.dark-mode .sidebar {
 }
 
 #hamburger-menu {
-   border: none;
-    cursor:default;
+    border: none;
+    cursor: default;
 }
 
 footer {
@@ -169,7 +154,7 @@ footer {
     border-radius: 20px;
     letter-spacing: 0.5px;
     cursor: text;
-} body.dark-mode #searchInput {
+}   body.dark-mode #searchInput {
     background-color: #181818;
     color: white;
 }
